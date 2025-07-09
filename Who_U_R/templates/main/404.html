@@ -1,0 +1,19 @@
+<!-- templates/404.html -->
+{% extends "layout.html" %}
+{% block title %}Page Not Found{% endblock %}
+
+{% block main %}
+<div class="max-w-4xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8 text-center">
+    <div class="text-9xl font-bold text-indigo-600 mb-8">404</div>
+    <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+        Oops! Page not found
+    </h1>
+    <p class="text-xl text-gray-600 dark:text-gray-300 mb-8">
+        The page you're looking for doesn't exist or has been moved.
+    </p>
+    <a href="{% url 'h' %}" 
+       class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700">
+        Go back home
+    </a>
+</div>
+{% endblock %}

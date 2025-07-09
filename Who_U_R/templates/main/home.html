@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+{% block title %}Who U R - Personality Analysis{% endblock %}
+{% block main %}
+    <!-- Main Content -->
+    <main class="pt-24 pb-12 px-4 sm:px-6 lg:px-8 h-screen flex items-center">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <!-- Left Side - Heading and Text -->
+            <div class="text-center lg:text-left">
+                <h1 class="text-5xl md:text-6xl font-bold bg-gradient-to-r from-blue-600 to-purple-500 bg-clip-text text-transparent mb-6">
+                    Who U R
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8 max-w-lg mx-auto lg:mx-0">
+                    I will tell you <span class="font-bold text-blue-600 dark:text-blue-400">90% right</span> about your personality
+                </p>
+                <p class="text-gray-500 dark:text-gray-400 mb-8 max-w-lg mx-auto lg:mx-0">
+                    Discover your true personality traits, strengths, and potential based on advanced psychological analysis. Our AI-powered system provides remarkably accurate insights.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                    <a href="{% url 'home' %}" class="px-6 py-3 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition-colors text-sm font-medium sm:hidden">
+                        Start Analysis
+                    </a>
+                    <a href="{% url 'about' %}" class="px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg hover:bg-gray-100 dark:hover:bg-dark-700 transition-colors text-sm font-medium text-white">
+                        About
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right Side - Analysis Button (Desktop) -->
+            <div class="hidden lg:flex justify-center">
+                <a href="{% url 'home' %}" class="relative group">
+                    <div class="absolute -inset-4 bg-gradient-to-r from-blue-600 to-purple-500 rounded-2xl blur opacity-75 group-hover:opacity-100 transition duration-200 animate-float"></div>
+                    <button class="relative px-12 py-6 bg-white dark:bg-dark-800 rounded-2xl text-2xl font-bold text-gray-800 dark:text-white hover:bg-gray-50 dark:hover:bg-dark-700 transition-colors">
+                        Start Analysis
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 ml-2 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                        </svg>
+                    </button>
+                </a>
+            </div>
+        </div>
+    </main>
+{% endblock %}

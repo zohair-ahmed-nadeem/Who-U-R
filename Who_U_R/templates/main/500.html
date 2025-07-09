@@ -1,0 +1,19 @@
+<!-- templates/500.html -->
+{% extends "layout.html" %}
+{% block title %}Server Error{% endblock %}
+
+{% block main %}
+<div class="max-w-4xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8 text-center">
+    <div class="text-9xl font-bold text-red-600 mb-8">500</div>
+    <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+        Server Error
+    </h1>
+    <p class="text-xl text-gray-600 dark:text-gray-300 mb-8">
+        Something went wrong on our end. We're working to fix it!
+    </p>
+    <a href="{% url 'h' %}" 
+       class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-red-600 hover:bg-red-700">
+        Go back home
+    </a>
+</div>
+{% endblock %}

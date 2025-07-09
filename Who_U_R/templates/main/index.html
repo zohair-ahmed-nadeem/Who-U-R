@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+{% block title %}Who U R - About Us{% endblock %}
+{% block main %}
+
+    <main class="pt-24 pb-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl mx-auto">
+            <div class="text-center mb-8">
+                <h1 class="text-4xl font-bold bg-gradient-to-r from-blue-600 to-purple-500 bg-clip-text text-transparent">Discover Your Personality</h1>
+                <p class="mt-2 text-lg text-gray-600 dark:text-gray-400">Enter your details to get a detailed psychological profile</p>
+            </div>
+            
+            <div class="glass-card p-6 sm:p-8 rounded-xl shadow-lg mb-8">
+                <form id="analysisForm" class="space-y-5">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Full Name</label>
+                        <input type="text" name="name" required
+                            class="mt-1 block w-full rounded-lg bg-white/50 dark:bg-dark-700/50 border-gray-300 dark:border-gray-600 shadow-sm p-3 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:focus:ring-blue-500 dark:focus:border-blue-500 transition">
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Date of Birth</label>
+                            <input type="date" name="date_of_birth" required
+                                class="mt-1 block w-full rounded-lg bg-white/50 dark:bg-dark-700/50 border-gray-300 dark:border-gray-600 shadow-sm p-3 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:focus:ring-blue-500 dark:focus:border-blue-500 transition">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Birth City</label>
+                            <input type="text" name="birth_city" required
+                                class="mt-1 block w-full rounded-lg bg-white/50 dark:bg-dark-700/50 border-gray-300 dark:border-gray-600 shadow-sm p-3 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:focus:ring-blue-500 dark:focus:border-blue-500 transition">
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="w-full flex items-center justify-center px-6 py-3 border border-transparent rounded-lg shadow-sm text-base font-medium text-white bg-gradient-to-r from-blue-600 to-purple-500 hover:from-blue-700 hover:to-purple-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-all duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                        Analyze Personality
+                    </button>
+                </form>
+            </div>
+            
+            <div id="result" class="glass-card p-6 rounded-xl shadow-lg min-h-48 max-h-[32rem] overflow-y-auto">
+                <div id="result-content" class="prose dark:prose-invert max-w-none text-gray-800 dark:text-gray-200">
+                    <p class="text-gray-500 dark:text-gray-400 italic">Your personality analysis will appear here...</p>
+                </div>
+            </div>
+        </div>
+    </main>
+{% endblock %}
